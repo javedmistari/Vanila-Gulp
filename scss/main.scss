@@ -1,0 +1,10 @@
+@import 'normalize.scss';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: yellow !important;
+    font-family: arial;
+}
