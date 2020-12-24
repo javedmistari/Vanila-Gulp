@@ -1,3 +1,4 @@
 $( document ).ready(function() {
-   // $('body').css('background','red');
+   // $('h1').css('color', 'white');
 });
+

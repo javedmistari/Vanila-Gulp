@@ -20,6 +20,9 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 //Minifies Images
 const imagemin = require('gulp-imagemin');
+//BrowserSync
+const browserSync = require('browser-sync').create();
+
 
 
 function html() {
@@ -63,14 +66,26 @@ function live() {
     gulp.watch('./*.html',html);
     gulp.watch('./scss/*.scss',css);
     gulp.watch('./js/*.js',scripts);
-  }
+}
+  
+function browsersync() {
+    browserSync.init({
+        server: {
+            baseDir: "./build"
+        }
+    });
+    
+    gulp.watch(['./build/*.html','./build/assets/scss/*.scss','./build/assets/js/*.js']).on('change', browserSync.reload);
+
+}
 
 exports.imgmin = imgmin
 exports.scripts = scripts
 exports.live = live
 exports.css = css
-exports.html = html   
-exports.default = parallel(html,css,scripts,live);
+exports.html = html 
+exports.browserSync = browserSync  
+exports.default = parallel(html,css,scripts,live,browsersync);
 
 
 
