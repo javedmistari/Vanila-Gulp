@@ -75,7 +75,7 @@ function browsersync() {
         }
     });
     
-    gulp.watch(['./build/*.html','./build/assets/scss/*.scss','./build/assets/js/*.js']).on('change', browserSync.reload);
+    gulp.watch(['./build/*.html','./build/assets/css/*.css','./build/assets/js/*.js']).on('change', browserSync.reload);
 
 }
 
