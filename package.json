@@ -13,7 +13,7 @@
     "SCSS",
     "GULP"
   ],
-  "author": "Javed Mistari",
+  "author": "Javed Saeed Mistari",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
