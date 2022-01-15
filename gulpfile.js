@@ -33,7 +33,7 @@ function html() {
 
 
 function css() {
-    return gulp.src('./scss/main.scss')
+    return gulp.src('./scss/style.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer())
     .pipe(
